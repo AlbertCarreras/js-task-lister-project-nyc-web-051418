@@ -58,10 +58,16 @@ document.addEventListener('DOMContentLoaded', () => {
   submitListBtn.addEventListener('click', event => {
     event.preventDefault();
     listName = listText.value;
-    const newList = new List(listName);
-    newList.buildList();
-    createTaskForm(listName);
-    deleteListButton(listName);
+    if (document.getElementById(`${listName}`)) {
+      alert('List name already exists, asshole!');
+    }
+    else {
+      const newList = new List(listName);
+      newList.buildList();
+      createTaskForm(listName);
+      deleteListButton(listName);
+    }
+    
   })
 
 
