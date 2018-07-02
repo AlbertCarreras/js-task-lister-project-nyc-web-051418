@@ -5,7 +5,7 @@ class TaskLister {
     this.priorityLevel = priorityLevel;
     this.task = `<li>
         Task: "${this.taskDescription}"
-        <button data-list-title="doughnuts" data-task-name="${this.taskDescription}" class="delete-task">
+        <button data-list-title="${this.chosenListOption}" data-task-name="${this.taskDescription}" class="delete-task">
             X
         </button>
         <br>
