@@ -16,13 +16,17 @@ class Task {
 
         <label for="new-task-priority">Priority level:</label>
         <input type="text" id="new-task-priority" placeholder="priority">
-        <input type="submit" value="Create New Task">
+        <input type="submit" value="Create New Task" id="submitTaskButton">
       </form>`
   }
 
 buildTask () {
   let appContent = document.getElementById('app-content');
   appContent.innerHTML += this.formHTML;
+
+}
+
+addToList() {
 
 }
 
