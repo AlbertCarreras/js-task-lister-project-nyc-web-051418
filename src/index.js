@@ -5,9 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const submitBtn = document.getElementById("submitButton");
   const listText = document.getElementById("new-list-title");
   submitBtn.addEventListener('click', event => {
+    event.preventDefault();
     listName = listText.value;
     const newList = new List(listName);
-    debugger
+    newList.buildList();
+    
+    const newTaskForm = new Task(listName);
+    newTaskForm.buildTask();
   })
-  // const app = new TaskLister();
+
+// const app = new TaskLister();
 });

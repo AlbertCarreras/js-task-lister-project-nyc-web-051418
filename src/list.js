@@ -15,6 +15,4 @@ class List {
       newDIV.appendChild(h2);
       listID.appendChild(newDIV);
     }
-    render() {
-    }
 }
