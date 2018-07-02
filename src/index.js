@@ -17,10 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitTaskBtn = document.getElementById("submitTaskButton");
     const newTaskDescription = document.getElementById("new-task-description");
     const newPriorityLevel = document.getElementById("new-task-priority");
+    const newChosenListOption = document.getElementById("parent-list");
+
     submitTaskBtn.addEventListener('click', event => {
       const taskDescription = newTaskDescription.value;
       const priorityLevel = newPriorityLevel.value;
-      const newTask = new TaskLister(taskDescription,priorityLevel);
+      const chosenListOption = newChosenListOption.value;
+      const newTask = new TaskLister(chosenListOption, taskDescription, priorityLevel);
+      newTask.buildTask();
     })
   }
 
